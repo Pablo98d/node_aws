@@ -13,7 +13,7 @@ fs.readdirSync(PATH_ROUTER).filter((fileName) => {
     const prefixRoute = cleanFileName(fileName);
 
     if (prefixRoute !=='index') {
-        console.log(`Cargando la ruta.. ${prefixRoute}`)
+        console.log(`Cargando la ruta.. ${prefixRoute}/api/video`)
         router.use(`/${prefixRoute}`,require(`./${prefixRoute}.js`));
     }
 
